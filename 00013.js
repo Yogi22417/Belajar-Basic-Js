@@ -1,16 +1,15 @@
 // Mencari Mean
 
-// Diberikan sebuah function cariMean(arr) yang menerima sebuah array angka.
-// Function akan me-return mean dari array atau deret angka tersebut. Mean adalah angka rata-rata dari deret bilangan tersebut.
+// Diberikan sebuah function cariMean(arr) yang menerima sebuah array angka. 
+// Function akan me-return mean dari array atau deret angka tersebut. Mean adalah angka rata-rata dari deret bilangan tersebut. 
 // Contoh, mean atau rata-rata dari [1, 2, 3, 4, 5] adalah 3. Kita perlu kemudian melakukan pembulatan angka dari hasil mean yang didapatkan.
 
 function cariMean(arr) {
-  // you can only write your code here!
-  let sum = 0;
-  arr.forEach(function (num) {
-    sum += num;
-  });
-  return Math.round(sum / arr.length);
+  let hasil = 0;
+  arr.forEach(function (num){
+    hasil += num;
+  })
+  return Math.round(hasil / arr.length);
 }
 
 // TEST CASES

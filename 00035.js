@@ -9,7 +9,12 @@
 // 512, berarti outputnya adalah 8, karena 5 + 1 + 2 = 8. 1542, berarti outputnya adalah 12, karena 1 + 5 + 4 + 2 = 12.
 
 function totalDigitRekursif(angka) {
-  // you can only write your code here!
+  let split = angka.toString().split('');
+  let sum = 0;
+  for(let i = 0 ; i < split.length ; i++){
+    sum += parseInt(split[i])
+  }
+  return sum;
 }
 
 // TEST CASES

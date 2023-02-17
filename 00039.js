@@ -32,7 +32,7 @@
 //   FOR LOOP index 0 till length of input
 
 function encrypt(input) {
-
+    
 }
 
 console.log(encrypt('dimitri')) // $(1(86(

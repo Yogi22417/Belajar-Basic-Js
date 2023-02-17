@@ -13,7 +13,7 @@
 // 10 => 1
 
 function makanTerusRekursif(waktu) {
-  // you can only write your code here!
+  return Math.ceil(waktu/15)
 }
 
 // TEST CASES

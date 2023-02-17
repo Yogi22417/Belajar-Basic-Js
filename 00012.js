@@ -1,21 +1,21 @@
 // Pasangan Angka Terbesar
 
-// Diberikan sebuah function pasanganTerbesar(angka) yang menerima 1 parameter berupa angka.
-// Function akan menentukan pasangan dua digit angka mana yang paling besar dan me-return angka tersebut.
+// Diberikan sebuah function pasanganTerbesar(angka) yang menerima 1 parameter berupa angka. 
+// Function akan menentukan pasangan dua digit angka mana yang paling besar dan me-return angka tersebut. 
 // Contoh, jika angka adalah 183928, maka function akan me-return 92, pasangan dua digit angka yang paling besar diantara yang lainnya.
 
 function pasanganTerbesar(num) {
-  // you can only write your code here!
-  let pair = 0;
-  let arr = num.toString().split("");
+  // Dapat dari google pak belum mengerti 
+  // let hasil = 0;
+  // let angka = num.toString().split('');
 
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (i === 0) pair = arr[i] + arr[i + 1];
-    if (pair < parseInt(arr[i] + arr[i + 1])) pair = parseInt(arr[i] + arr[i + 1]);
-  }
-  return parseInt(pair);
+  // for(let i = 0; i <= angka.length; i++){
+  //   if(i === 0){hasil = angka[i]+angka[i+1]}
+  //   if(hasil < angka[i]+angka[i+1]){hasil = angka[i]+angka[i+1]}
+  // }
+
+  // return parseInt(hasil);
 }
-
 // TEST CASES
 console.log(pasanganTerbesar(641573)); // 73
 console.log(pasanganTerbesar(12783456)); // 83

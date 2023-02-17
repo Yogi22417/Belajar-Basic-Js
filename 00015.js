@@ -1,17 +1,16 @@
 // Tentukan Deret Aritmatika
 
-// Diberikan sebuah function tentukanDeretAritmatika(arr) yang menerima satu parameter berupa array yang terdiri dari angka.
-// Function tersebut akan mengembalikan true jika array dari parameter tersebut merupakan deret aritmatika.
-// Deret aritmatika adalah sebuah deret dimana perbedaan setiap angka di deret tersebut konsisten.
+// Diberikan sebuah function tentukanDeretAritmatika(arr) yang menerima satu parameter berupa array yang terdiri dari angka. 
+// Function tersebut akan mengembalikan true jika array dari parameter tersebut merupakan deret aritmatika. 
+// Deret aritmatika adalah sebuah deret dimana perbedaan setiap angka di deret tersebut konsisten. 
 // Contoh, [2, 4, 6, 8] adalah deret aritmatika dengan pertambahan nilai sebesar 2, dan [2, 4, 6, 9] bukanlah deret aritmatika karena tidak perbedaan selisih antar angka yang tidak konsisten.
 
 function tentukanDeretAritmatika(arr) {
-  // you can only write your code here!
-  let n = 0;
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (i === 0) n = arr[i + 1] - arr[i];
-    if (i !== arr.length - 1 && n !== arr[i + 1] - arr[i]) return false;
-  }
+  let hasil = 1;
+  for(let i = 0; i < arr.length ; i++){
+    if(i == 0){hasil = arr[i+1] - arr[i]};
+    if(i != arr.length-1 && hasil != arr[i+1] - arr[i]){return false};
+  };
   return true;
 }
 

@@ -1,16 +1,16 @@
 // Tentukan Deret Geometri
 
-// Diberikan sebuah function tentukanDeretGeometri(arr) yang menerima satu parameter berupa array yang terdiri dari angka.
-// Function tersebut akan mengembalikan true jika array dari parameter tersebut merupakan deret geometri.
+// Diberikan sebuah function tentukanDeretGeometri(arr) yang menerima satu parameter berupa array yang terdiri dari angka. 
+// Function tersebut akan mengembalikan true jika array dari parameter tersebut merupakan deret geometri. 
 // Deret geometri adalah sebuah deret dimana perbedaan setiap angka di deret tersebut konsisten secara perkalian. Contoh, [1, 3, 9, 27, 81] adalah deret aritmatika dengan pertambahan nilai sebesar pengalian 3, dan [1, 3, 9, 27, 48] bukanlah deret aritmatika karena tidak perbedaan selisih antar angka yang tidak konsisten secara perkalian (27 * 3 bukanlah 48!).
 
 function tentukanDeretGeometri(arr) {
-  // you can only write your code here!
-  let n = 1;
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (i === 0) n = arr[i + 1] / arr[i];
-    if (i !== arr.length - 1 && n !== arr[i + 1] / arr[i]) return false;
-  }
+  let hasil = 1;
+  for(let i = 0; i < arr.length ; i++){
+    if(i == 0){hasil = arr[i+1] / arr[i]};
+    if(i != arr.length-1 && hasil != arr[i+1] / arr[i]){return false};
+    console.log(arr.length-1);
+  };
   return true;
 }
 
