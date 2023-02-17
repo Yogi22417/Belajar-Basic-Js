@@ -30,7 +30,27 @@ const spells = [
 ];
 
 function invokeSpell (input) {
+    let qCount = 0;
+    let wCount = 0;
+    let eCount = 0;
 
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === "q") {
+        qCount++;
+        } else if (input[i] === "w") {
+        wCount++;
+        } else if (input[i] === "e") {
+        eCount++;
+        }
+    }
+
+    for (let i = 0; i < spells.length; i++) {
+        if (spells[i].q === qCount && spells[i].w === wCount && spells[i].e === eCount) {
+        return spells[i].spellName;
+        }
+    }
+
+    return "Combination does not exist";
 }
 
 console.log(invokeSpell('qwe')); // Deafening Blast

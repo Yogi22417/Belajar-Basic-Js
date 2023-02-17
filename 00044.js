@@ -10,7 +10,18 @@
 
 
 function drawTrack(players, lengthOfTrack) {
-    
+    let result = new Array(lengthOfTrack).fill("");
+
+    for (let i = 0; i < players.length; i++) {
+        let [playerName, playerPosition] = players[i];
+        result[playerPosition - 1] = playerName;
+    }
+
+    if (result.some((el) => el === "")) {
+        return result;
+    } else {
+        return [result];
+    }
 }
   
 console.log(drawTrack([

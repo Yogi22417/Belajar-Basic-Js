@@ -14,9 +14,7 @@
 //   - DILARANG menggunakan built in function .indexOf atau .include
 //   - DILARANG menggunakan REGEX
 
-function consonantCounterRecursive(sentences) {
-
-}
+function consonantCounterRecursive(sentences) {}
 
 console.log(consonantCounterRecursive('alDi Suka MakAn baksO')) //13
 console.log(consonantCounterRecursive('AziZy')) // 3

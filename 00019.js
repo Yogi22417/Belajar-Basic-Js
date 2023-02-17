@@ -11,7 +11,23 @@
 // Urutan hewan dalam array setiap pengelompokan huruf tidak penting.
 
 function groupAnimals(animals) {
-  // you can only write your code here!
+  let obj = {};
+  animals.forEach(function (animal) {
+    if (obj[animal[0]] !== undefined) {
+      obj[animal[0]].push(animal);
+    } else {
+      obj[animal[0]] = [animal];
+    }
+  });
+
+  let ordered = [];
+  Object.keys(obj)
+    .sort()
+    .forEach(function (key) {
+      ordered.push(obj[key]);
+    });
+
+  return ordered;
 }
 
 // TEST CASES

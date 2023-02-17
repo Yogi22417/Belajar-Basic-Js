@@ -32,7 +32,17 @@
 //   FOR LOOP index 0 till length of input
 
 function encrypt(input) {
-    
+    let huruf = 'abcdefghijklmnopqrstuvwxyz';
+    let encrypt = '!@#$%^&*()-+1234567890[]{}';
+    let shuruf = huruf.split('');
+    let sencrypt = encrypt.split('');
+    let sinput = input.split('');
+    for(let i = 0; i < sinput.length ; i++){
+        for(let e = 0; e<= shuruf.length; e++){
+            if(sinput[i] == shuruf[e]){sinput[i] = sencrypt[e]}
+        }
+    }
+    return sinput.join('');
 }
 
 console.log(encrypt('dimitri')) // $(1(86(

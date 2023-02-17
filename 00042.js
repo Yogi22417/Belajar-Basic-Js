@@ -21,7 +21,23 @@
 //  WAJIB MENYERTAKAN ALGORITMA/PSEUDOCODE
 
 function howManyGifts(maxBudget, gifts){
-  // Code here
+  //DEKLARASI
+  var giftCount = 0;
+  var budget = maxBudget;
+  var sortedGifts = gifts.sort(function (a, b) {
+    return a - b;
+  });
+
+  //ALGORITMA
+  for (var i = 0; i < sortedGifts.length; i++) {
+    budget -= sortedGifts[i];
+    if (budget >= 0) {
+      giftCount++;
+    } else {
+      break;
+    }
+  }
+  return giftCount;
 }
 
 console.log(howManyGifts(30000, [15000, 12000, 5000, 3000, 10000])); // 4

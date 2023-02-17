@@ -27,7 +27,39 @@
 
 
 function getReport(studentGrades) {
-  // only code here..
+  const report = [];
+
+  const studentsByClass = {};
+  for (let i = 0; i < studentGrades.length; i++) {
+    const classCode = studentGrades[i].classCode;
+    if (!studentsByClass[classCode]) {
+      studentsByClass[classCode] = [];
+    }
+    studentsByClass[classCode].push(studentGrades[i]);
+  }
+
+  for (let classCode in studentsByClass) {
+    const studentsInClass = studentsByClass[classCode];
+    const passedStudents = [];
+    const failedStudents = [];
+
+    for (let i = 0; i < studentsInClass.length; i++) {
+      const student = studentsInClass[i];
+      if (student.score >= 70) {
+        passedStudents.push(student.name);
+      } else {
+        failedStudents.push(student.name);
+      }
+    }
+
+    report.push({
+      classCode: classCode,
+      passed: passedStudents,
+      failed: failedStudents,
+    });
+  }
+
+  return report;
 }
 
 
