@@ -5,16 +5,16 @@
 // Contoh, jika angka adalah 183928, maka function akan me-return 92, pasangan dua digit angka yang paling besar diantara yang lainnya.
 
 function pasanganTerbesar(num) {
-  // Dapat dari google pak belum mengerti 
-  // let hasil = 0;
-  // let angka = num.toString().split('');
+  
+  let hasil = 0;
+  let angka = num.toString().split('');
 
-  // for(let i = 0; i <= angka.length; i++){
-  //   if(i === 0){hasil = angka[i]+angka[i+1]}
-  //   if(hasil < angka[i]+angka[i+1]){hasil = angka[i]+angka[i+1]}
-  // }
+  for(let i = 0; i <= angka.length; i++){
+    if(i === 0){hasil = angka[i]+angka[i+1]}
+    if(hasil < angka[i]+angka[i+1]){hasil = angka[i]+angka[i+1]}
+  }
 
-  // return parseInt(hasil);
+  return parseInt(hasil);
 }
 // TEST CASES
 console.log(pasanganTerbesar(641573)); // 73

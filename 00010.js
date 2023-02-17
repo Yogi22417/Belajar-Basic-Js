@@ -7,6 +7,7 @@
 // Contoh, jika angka adalah 8, walaupun dia sudah palindrome, harus mencari angka selanjutnya yang palindrome, yaitu 9.
 
 function angkaPalindrome(num) {
+  //Dapat dari google pak belum mengerti 
   let leftSide = 1;
   let rightSide = 2;
   
